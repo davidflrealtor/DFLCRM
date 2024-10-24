@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+.glassmorphism {
+  @apply bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-br from-purple-600 to-blue-500;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-700;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-400;
+}
+
+/* Improved text legibility */
+.text-content {
+  @apply text-gray-800 dark:text-gray-200;
+}
+
+.text-content-light {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+.bg-content {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.border-content {
+  @apply border-gray-200 dark:border-gray-700;
+}
+
+/* Additional dark mode styles */
+.dark .recharts-cartesian-grid-horizontal line,
+.dark .recharts-cartesian-grid-vertical line {
+  @apply stroke-gray-700;
+}
+
+.dark .recharts-text {
+  @apply fill-gray-300;
+}
+
+.dark .recharts-legend-item-text {
+  @apply text-gray-300;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  @apply text-gray-500;
+}
+
+.dark select {
+  @apply bg-gray-700 text-gray-200 border-gray-600;
+}
+
+.dark option {
+  @apply bg-gray-700 text-gray-200;
+}
